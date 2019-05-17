@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+$ipadview: 1000px;
+$phoneview: 800px;
+
+@mixin ipadview {
+  @media (max-width: #{$ipadview}) {
+    @content;
+  }
+}
+
+@mixin phoneview {
+  @media (max-width: #{$phoneview}) {
+    @content;
+  }
+}
+
+body,
+html {
+  font-family: 'Montserrat';
+  background-image: url('../images/background-img.png');
+  background-repeat: no-repeat;
+  background-position-y: 630px;
+}
+body {
+  .navbar {
+    margin: 80px 130px 100px 130px;
+
+    .logo {
+      font-size: 30px;
+      @include ipadview {
+        font-size: 18px;
+      }
+      @include phoneview {
+        font-size: 16px;
+        margin-left: -80px;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    .nav-item {
+      float: right;
+      padding-right: 14px;
+      color: #707070;
+
+      @include ipadview {
+        font-size: 15px;
+      }
+      @include phoneview {
+        display: inline-block;
+        position: relative;
+        top: 60px;
+        right: 30px;
+      }
+    }
+  }
+  section {
+    h1 {
+      text-align: center;
+      font-size: 60px;
+      margin-bottom: 2px;
+      @include ipadview {
+        font-size: 40px;
+      }
+      @include phoneview {
+        font-size: 20px;
+      }
+    }
+    p {
+      text-align: center;
+      font-size: 20px;
+      color: #707070;
+      @include ipadview {
+        font-size: 15px;
+      }
+      @include phoneview {
+        font-size: 10px;
+      }
+    }
+    .socialmediaicons li {
+      list-style-type: none;
+      margin-left: 6rem;
+      padding-top: 2rem;
+    }
+  }
+}
+
+header {
+  .mypic {
+    position: absolute;
+    right: 43%;
+    @include ipadview {
+      right: 35%;
+    }
+    @include phoneview {
+      width: 150px;
+    }
+  }
+  .hireme {
+    position: absolute;
+    left: 46.5%;
+    margin-top: 300px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: white;
+    color: #2197ff;
+    border: 2px solid #2197ff;
+    border-radius: 10px;
+    @include ipadview {
+      left: 44%;
+    }
+    @include phoneview {
+      bottom: 48%;
+      left: 37%;
+    }
+  }
+}
