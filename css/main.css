@@ -91,32 +91,64 @@ body section p {
 }
 
 body section .socialmediaicons li {
+  position: relative;
+  display: block;
   list-style-type: none;
   margin-left: 6rem;
   padding-top: 2rem;
 }
 
+header .myandbutton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 header .mypic {
-  position: absolute;
-  right: 43%;
+  position: relative;
+  margin: auto auto;
+  bottom: 220px;
 }
 
 @media (max-width: 1000px) {
   header .mypic {
-    right: 35%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
 @media (max-width: 800px) {
   header .mypic {
     width: 150px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
 header .hireme {
   position: absolute;
-  left: 46.5%;
-  margin-top: 300px;
+  bottom: 100px;
+  margin: 180px auto;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -131,14 +163,32 @@ header .hireme {
 
 @media (max-width: 1000px) {
   header .hireme {
-    left: 44%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    bottom: 160px;
   }
 }
 
 @media (max-width: 800px) {
   header .hireme {
-    bottom: 48%;
-    left: 37%;
+    font-size: 12px;
+    bottom: 340px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -80,7 +80,10 @@ body {
         font-size: 10px;
       }
     }
+
     .socialmediaicons li {
+      position: relative;
+      display: block;
       list-style-type: none;
       margin-left: 6rem;
       padding-top: 2rem;
@@ -89,20 +92,31 @@ body {
 }
 
 header {
+  .myandbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .mypic {
-    position: absolute;
-    right: 43%;
+    position: relative;
+    margin: auto auto;
+    bottom: 220px;
     @include ipadview {
-      right: 35%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     @include phoneview {
       width: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
   .hireme {
     position: absolute;
-    left: 46.5%;
-    margin-top: 300px;
+    bottom: 100px;
+    margin: 180px auto;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -114,11 +128,17 @@ header {
     border: 2px solid #2197ff;
     border-radius: 10px;
     @include ipadview {
-      left: 44%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      bottom: 160px;
     }
     @include phoneview {
-      bottom: 48%;
-      left: 37%;
+      font-size: 12px;
+      bottom: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }
