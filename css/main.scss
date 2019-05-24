@@ -1,7 +1,9 @@
+@import './reset';
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 $ipadview: 1000px;
 $phoneview: 800px;
+$subcolor: #707070;
 
 @mixin ipadview {
   @media (max-width: #{$ipadview}) {
@@ -15,79 +17,161 @@ $phoneview: 800px;
   }
 }
 
-body,
-html {
+body {
   font-family: 'Montserrat';
-  background-image: url('../images/background-img.png');
+  background-image: url('/images/background-img.png');
   background-repeat: no-repeat;
   background-position-y: 630px;
 }
-body {
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 5rem;
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .logo {
+    font-weight: bold;
+    font-size: 1.7em;
+  }
+
   .navbar {
-    margin: 80px 130px 100px 130px;
-
-    .logo {
-      font-size: 30px;
-      @include ipadview {
-        font-size: 18px;
-      }
-      @include phoneview {
-        font-size: 16px;
-        margin-left: -80px;
-      }
-    }
-
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    text-align: right;
     a {
-      text-decoration: none;
-      color: black;
-    }
-    .nav-item {
-      float: right;
-      padding-right: 14px;
-      color: #707070;
-
-      @include ipadview {
-        font-size: 15px;
+      color: $subcolor;
+      margin-right: 0.5em;
+      transition: all 0.2s ease-in-out;
+      &:last-of-type {
+        margin: 0;
       }
-      @include phoneview {
-        display: inline-block;
-        position: relative;
-        top: 60px;
-        right: 30px;
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
-  section {
-    h1 {
-      text-align: center;
-      font-size: 60px;
-      margin-bottom: 2px;
-      @include ipadview {
-        font-size: 40px;
-      }
-      @include phoneview {
-        font-size: 20px;
-      }
-    }
-    p {
-      text-align: center;
-      font-size: 20px;
-      color: #707070;
-      @include ipadview {
-        font-size: 15px;
-      }
-      @include phoneview {
-        font-size: 10px;
-      }
-    }
+}
 
-    .socialmediaicons li {
-      position: relative;
-      display: block;
-      list-style-type: none;
-      margin-left: 6rem;
-      padding-top: 2rem;
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 6rem;
+
+  h1 {
+    font-weight: bold;
+    font-size: 3.75rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1.25rem;
+    color: #707070;
+  }
+
+  .myandbutton {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    padding: 1.5em;
+    .mypic {
+      animation: rot 5s infinite;
     }
+    .hireme {
+      margin-top: 1.5em;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: white;
+      color: #2197ff;
+      border: 2px solid #2197ff;
+      border-radius: 10px;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+// .navbar {
+//   margin: 80px 130px 100px 130px;
+
+// .logo {
+//   font-size: 30px;
+//   @include ipadview {
+//     font-size: 18px;
+//   }
+//   @include phoneview {
+//     font-size: 16px;
+//     margin-left: -80px;
+//   }
+// }
+
+// a {
+//   text-decoration: none;
+//   color: black;
+// }
+// .nav-item {
+//   float: right;
+//   padding-right: 14px;
+//   color: #707070;
+
+//   @include ipadview {
+//     font-size: 15px;
+//   }
+//   @include phoneview {
+//     display: inline-block;
+//     position: relative;
+//     top: 60px;
+//     right: 30px;
+//   }
+
+section {
+  h1 {
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 2px;
+    @include ipadview {
+      font-size: 40px;
+    }
+    @include phoneview {
+      font-size: 20px;
+    }
+  }
+  p {
+    text-align: center;
+    font-size: 20px;
+    color: #707070;
+    @include ipadview {
+      font-size: 15px;
+    }
+    @include phoneview {
+      font-size: 10px;
+    }
+  }
+
+  .socialmediaicons li {
+    position: relative;
+    display: block;
+    list-style-type: none;
+    margin-left: 6rem;
+    padding-top: 2rem;
   }
 }
 
@@ -96,6 +180,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: red;
   }
   .mypic {
     position: relative;
@@ -114,9 +199,9 @@ header {
     }
   }
   .hireme {
-    position: absolute;
-    bottom: 100px;
-    margin: 180px auto;
+    // position: absolute;
+    // bottom: 100px;
+    // margin: 180px auto;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -140,5 +225,14 @@ header {
       align-items: center;
       justify-content: center;
     }
+  }
+}
+
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

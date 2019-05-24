@@ -1,96 +1,304 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
+html,
 body,
-html {
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
   font-family: 'Montserrat';
-  background-image: url("../images/background-img.png");
+  background-image: url("/images/background-img.png");
   background-repeat: no-repeat;
   background-position-y: 630px;
 }
 
-body .navbar {
-  margin: 80px 130px 100px 130px;
+.container {
+  max-width: 90%;
+  margin: 0 auto;
 }
 
-body .navbar .logo {
-  font-size: 30px;
+header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5rem;
 }
 
-@media (max-width: 1000px) {
-  body .navbar .logo {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 800px) {
-  body .navbar .logo {
-    font-size: 16px;
-    margin-left: -80px;
-  }
-}
-
-body .navbar a {
+header a {
   text-decoration: none;
-  color: black;
+  color: #000;
 }
 
-body .navbar .nav-item {
-  float: right;
-  padding-right: 14px;
+header .logo {
+  font-weight: bold;
+  font-size: 1.7em;
+}
+
+header .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+  text-align: right;
+}
+
+header .navbar a {
+  color: #707070;
+  margin-right: 0.5em;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+header .navbar a:last-of-type {
+  margin: 0;
+}
+
+header .navbar a:hover {
+  text-decoration: underline;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 6rem;
+}
+
+main h1 {
+  font-weight: bold;
+  font-size: 3.75rem;
+  margin-bottom: 1rem;
+}
+
+main p {
+  font-size: 1.25rem;
   color: #707070;
 }
 
-@media (max-width: 1000px) {
-  body .navbar .nav-item {
-    font-size: 15px;
-  }
+main .myandbutton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1.5em;
 }
 
-@media (max-width: 800px) {
-  body .navbar .nav-item {
-    display: inline-block;
-    position: relative;
-    top: 60px;
-    right: 30px;
-  }
+main .myandbutton .mypic {
+  -webkit-animation: rot 5s infinite;
+          animation: rot 5s infinite;
 }
 
-body section h1 {
+main .myandbutton .hireme {
+  margin-top: 1.5em;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: white;
+  color: #2197ff;
+  border: 2px solid #2197ff;
+  border-radius: 10px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+main .myandbutton .hireme:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+section h1 {
   text-align: center;
   font-size: 60px;
   margin-bottom: 2px;
 }
 
 @media (max-width: 1000px) {
-  body section h1 {
+  section h1 {
     font-size: 40px;
   }
 }
 
 @media (max-width: 800px) {
-  body section h1 {
+  section h1 {
     font-size: 20px;
   }
 }
 
-body section p {
+section p {
   text-align: center;
   font-size: 20px;
   color: #707070;
 }
 
 @media (max-width: 1000px) {
-  body section p {
+  section p {
     font-size: 15px;
   }
 }
 
 @media (max-width: 800px) {
-  body section p {
+  section p {
     font-size: 10px;
   }
 }
 
-body section .socialmediaicons li {
+section .socialmediaicons li {
   position: relative;
   display: block;
   list-style-type: none;
@@ -108,6 +316,7 @@ header .myandbutton {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: red;
 }
 
 header .mypic {
@@ -146,9 +355,6 @@ header .mypic {
 }
 
 header .hireme {
-  position: absolute;
-  bottom: 100px;
-  margin: 180px auto;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -189,6 +395,28 @@ header .hireme {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+@-webkit-keyframes rot {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rot {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 /*# sourceMappingURL=main.css.map */
