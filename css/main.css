@@ -138,7 +138,9 @@ body {
   font-family: 'Montserrat';
   background-image: url("/images/background-img.png");
   background-repeat: no-repeat;
-  background-position-y: 630px;
+  background-size: 100%;
+  background-position-y: 30rem;
+  background-attachment: fixed;
 }
 
 .container {
@@ -207,12 +209,12 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 6rem;
+  margin-top: 2rem;
 }
 
 main h1 {
   font-weight: bold;
-  font-size: 3.75rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
@@ -236,11 +238,6 @@ main .myandbutton {
   padding: 1.5em;
 }
 
-main .myandbutton .mypic {
-  -webkit-animation: rot 5s infinite;
-          animation: rot 5s infinite;
-}
-
 main .myandbutton .hireme {
   margin-top: 1.5em;
   padding: 15px 32px;
@@ -262,161 +259,12 @@ main .myandbutton .hireme:hover {
           transform: scale(1.2);
 }
 
-section h1 {
-  text-align: center;
-  font-size: 60px;
-  margin-bottom: 2px;
+main .socialmediaicons {
+  position: absolute;
+  left: 5rem;
 }
 
-@media (max-width: 1000px) {
-  section h1 {
-    font-size: 40px;
-  }
-}
-
-@media (max-width: 800px) {
-  section h1 {
-    font-size: 20px;
-  }
-}
-
-section p {
-  text-align: center;
-  font-size: 20px;
-  color: #707070;
-}
-
-@media (max-width: 1000px) {
-  section p {
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 800px) {
-  section p {
-    font-size: 10px;
-  }
-}
-
-section .socialmediaicons li {
-  position: relative;
-  display: block;
-  list-style-type: none;
-  margin-left: 6rem;
-  padding-top: 2rem;
-}
-
-header .myandbutton {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: red;
-}
-
-header .mypic {
-  position: relative;
-  margin: auto auto;
-  bottom: 220px;
-}
-
-@media (max-width: 1000px) {
-  header .mypic {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-@media (max-width: 800px) {
-  header .mypic {
-    width: 150px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-header .hireme {
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: white;
-  color: #2197ff;
-  border: 2px solid #2197ff;
-  border-radius: 10px;
-}
-
-@media (max-width: 1000px) {
-  header .hireme {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    bottom: 160px;
-  }
-}
-
-@media (max-width: 800px) {
-  header .hireme {
-    font-size: 12px;
-    bottom: 340px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-@-webkit-keyframes rot {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes rot {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+main .socialmediaicons li {
+  margin-bottom: 2rem;
 }
 /*# sourceMappingURL=main.css.map */
