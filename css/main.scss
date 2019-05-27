@@ -1,8 +1,10 @@
 @import './reset';
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-$ipadview: 1000px;
-$phoneview: 800px;
+
+
+$ipadview: 780px;
+$phoneview: 500px;
 $subcolor: #707070;
 
 @mixin ipadview {
@@ -19,16 +21,21 @@ $subcolor: #707070;
 
 body {
   font-family: 'Montserrat';
-  background-image: url('/images/background-img.png');
+  background: url('/images/background-img.png');
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position-y: 30rem;
+  background-position: left bottom;
   background-attachment: fixed;
+  
 }
 
 .container {
   max-width: 90%;
   margin: 0 auto;
+
+  @include ipadview {
+    margin: 0 5rem;
+  }
 }
 
 header {
@@ -36,16 +43,31 @@ header {
   display: flex;
   align-items: center;
   margin-top: 5rem;
-;
 
   a {
     text-decoration: none;
     color: #000;
+
+    @include ipadview {
+      font-size: .8em !important;
+    }
+    
+    @include phoneview {
+      font-size: .6em !important;
+    }
   }
 
   .logo {
     font-weight: bold;
     font-size: 1.7em;
+
+    @include ipadview {
+      font-size: 1.3em !important;
+    }
+@include phoneview {
+  font-size: 1em !important;
+}
+
   }
 
   .navbar {
@@ -79,11 +101,29 @@ main {
     font-weight: bold;
     font-size: 3rem;
     margin-bottom: 1rem;
+
+    @include ipadview {
+      font-size: 2em !important;
+      margin-top: 2rem !important;
+    }
+
+    @include phoneview {
+      font-size: 1em !important;
+      margin-top: 1em !important;
+    }
     
   }
   p {
     font-size: 1.25rem;
     color: #707070;
+
+    @include ipadview {
+      font-size: .9em !important;
+    }
+
+    @include phoneview {
+      font-size: .6em !important;
+    }
   }
 
   .myandbutton {
@@ -92,9 +132,17 @@ main {
     justify-items: center;
     flex-direction: column;
     padding: 1.5em;
+
+    .mypic {
+      width: 250px;
+
+      @include phoneview {
+        width: 150px;
+      }
+    }
  
     .hireme {
-      margin-top: 1.5em;
+      margin-top: .8em;
       padding: 15px 32px;
       text-align: center;
       text-decoration: none;
@@ -108,16 +156,36 @@ main {
       transition: all 0.2s ease-in-out;
       &:hover {
         transform: scale(1.2);
+        
+      }
+      @include phoneview {
+        font-size: 12px !important;
+        padding: 10px 20px !important;
+        margin-top: 1.5em !important;
       }
     }
   }
 
   .socialmediaicons {
-position: absolute;
-left: 5rem;
+  position: absolute;
+  left: 5rem;
 
-li{
-  margin-bottom: 2rem;
-}
+  @include ipadview {
+    position: static !important;
+    margin-top: 2rem;
+    
   }
+  }
+
+  li{
+  margin-bottom: 2rem;
+
+    @include ipadview {
+      display: inline-flex !important;
+      margin-right: 2rem;
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  } 
 }

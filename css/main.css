@@ -136,16 +136,22 @@ table {
 
 body {
   font-family: 'Montserrat';
-  background-image: url("/images/background-img.png");
+  background: url("/images/background-img.png");
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position-y: 30rem;
+  background-position: left bottom;
   background-attachment: fixed;
 }
 
 .container {
   max-width: 90%;
   margin: 0 auto;
+}
+
+@media (max-width: 780px) {
+  .container {
+    margin: 0 5rem;
+  }
 }
 
 header {
@@ -164,9 +170,33 @@ header a {
   color: #000;
 }
 
+@media (max-width: 780px) {
+  header a {
+    font-size: .8em !important;
+  }
+}
+
+@media (max-width: 500px) {
+  header a {
+    font-size: .6em !important;
+  }
+}
+
 header .logo {
   font-weight: bold;
   font-size: 1.7em;
+}
+
+@media (max-width: 780px) {
+  header .logo {
+    font-size: 1.3em !important;
+  }
+}
+
+@media (max-width: 500px) {
+  header .logo {
+    font-size: 1em !important;
+  }
 }
 
 header .navbar {
@@ -218,9 +248,35 @@ main h1 {
   margin-bottom: 1rem;
 }
 
+@media (max-width: 780px) {
+  main h1 {
+    font-size: 2em !important;
+    margin-top: 2rem !important;
+  }
+}
+
+@media (max-width: 500px) {
+  main h1 {
+    font-size: 1em !important;
+    margin-top: 1em !important;
+  }
+}
+
 main p {
   font-size: 1.25rem;
   color: #707070;
+}
+
+@media (max-width: 780px) {
+  main p {
+    font-size: .9em !important;
+  }
+}
+
+@media (max-width: 500px) {
+  main p {
+    font-size: .6em !important;
+  }
 }
 
 main .myandbutton {
@@ -238,8 +294,18 @@ main .myandbutton {
   padding: 1.5em;
 }
 
+main .myandbutton .mypic {
+  width: 250px;
+}
+
+@media (max-width: 500px) {
+  main .myandbutton .mypic {
+    width: 150px;
+  }
+}
+
 main .myandbutton .hireme {
-  margin-top: 1.5em;
+  margin-top: .8em;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -259,12 +325,39 @@ main .myandbutton .hireme:hover {
           transform: scale(1.2);
 }
 
+@media (max-width: 500px) {
+  main .myandbutton .hireme {
+    font-size: 12px !important;
+    padding: 10px 20px !important;
+    margin-top: 1.5em !important;
+  }
+}
+
 main .socialmediaicons {
   position: absolute;
   left: 5rem;
 }
 
-main .socialmediaicons li {
+@media (max-width: 780px) {
+  main .socialmediaicons {
+    position: static !important;
+    margin-top: 2rem;
+  }
+}
+
+main li {
   margin-bottom: 2rem;
+}
+
+@media (max-width: 780px) {
+  main li {
+    display: -webkit-inline-box !important;
+    display: -ms-inline-flexbox !important;
+    display: inline-flex !important;
+    margin-right: 2rem;
+  }
+  main li:last-of-type {
+    margin: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */
