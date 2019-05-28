@@ -136,20 +136,19 @@ table {
 
 body {
   font-family: 'Montserrat';
-  background: url("../images/background-img.png");
+  background-image: url("../images/bg-img.svg");
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: left bottom;
   background-attachment: fixed;
 }
 
-.container {
+#container {
   max-width: 90%;
   margin: 0 auto;
 }
 
 @media (max-width: 780px) {
-  .container {
+  #container {
     margin: 0 5rem;
   }
 }
@@ -163,6 +162,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 header a {
@@ -239,125 +239,81 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 2rem;
+  text-align: center;
 }
 
-main h1 {
-  font-weight: bold;
+main .aboutme h1 {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  font-weight: bold;
 }
 
-@media (max-width: 780px) {
-  main h1 {
-    font-size: 2em !important;
-    margin-top: 2rem !important;
-  }
-}
-
-@media (max-width: 500px) {
-  main h1 {
-    font-size: 1em !important;
-    margin-top: 1em !important;
-  }
-}
-
-main p {
-  font-size: 1.25rem;
+main .aboutme p {
+  padding: 5rem 20rem;
   color: #707070;
 }
 
-@media (max-width: 780px) {
-  main p {
-    font-size: 0.9em !important;
-  }
+main .skills h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 5rem;
 }
 
-@media (max-width: 500px) {
-  main p {
-    font-size: 0.6em !important;
-  }
+main .skills img {
+  width: 80%;
 }
 
-main .myandbutton {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  justify-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 1.5em;
+main .workexperience h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 5rem;
 }
 
-main .myandbutton .mypic {
-  width: 250px;
+main .workexperience .rcbc {
+  line-height: 1.5;
+  color: #707070;
 }
 
-@media (max-width: 500px) {
-  main .myandbutton .mypic {
-    width: 150px;
-  }
+main .workexperience .rcbc img {
+  width: 10rem;
+  margin-bottom: 1em;
 }
 
-main .myandbutton .hireme {
-  margin-top: 0.8em;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: white;
-  color: #2197ff;
-  border: 2px solid #2197ff;
-  border-radius: 10px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+main .workexperience .rcbc h6 {
+  font-size: 1em;
+  font-weight: bold;
 }
 
-main .myandbutton .hireme:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+main .workexperience .duties {
+  padding: 1rem 20rem;
+  line-height: 1.5;
+  color: #707070;
+  margin: 2.5rem;
+  text-align: justify;
 }
 
-@media (max-width: 500px) {
-  main .myandbutton .hireme {
-    font-size: 12px !important;
-    padding: 10px 20px !important;
-    margin-top: 1.5em !important;
-  }
-}
-
-main .socialmediaicons {
-  position: absolute;
-  left: 5rem;
-}
-
-@media (max-width: 780px) {
-  main .socialmediaicons {
-    position: static !important;
-    margin-top: 2rem;
-  }
-}
-
-main li {
+main .education {
+  line-height: 1.5;
   margin-bottom: 2rem;
 }
 
-@media (max-width: 780px) {
-  main li {
-    display: -webkit-inline-box !important;
-    display: -ms-inline-flexbox !important;
-    display: inline-flex !important;
-    margin-right: 2rem;
-  }
-  main li:last-of-type {
-    margin: 0;
-  }
+main .education h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 5rem;
 }
-/*# sourceMappingURL=main.css.map */
+
+main .education img {
+  width: 5rem;
+  margin-bottom: 1em;
+}
+
+main .education h5 {
+  font-size: 1em;
+  font-weight: bold;
+  color: #707070;
+}
+
+main .education p {
+  color: #707070;
+}
+/*# sourceMappingURL=about.css.map */

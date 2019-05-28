@@ -1,0 +1,166 @@
+@import './reset';
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+$ipadview: 780px;
+$phoneview: 500px;
+$subcolor: #707070;
+
+@mixin ipadview {
+  @media (max-width: #{$ipadview}) {
+    @content;
+  }
+}
+
+@mixin phoneview {
+  @media (max-width: #{$phoneview}) {
+    @content;
+  }
+}
+
+body {
+  font-family: 'Montserrat';
+  background-image: url('../images/bg-img.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+}
+
+#container {
+  max-width: 90%;
+  margin: 0 auto;
+
+  @include ipadview {
+    margin: 0 5rem;
+  }
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+
+  a {
+    text-decoration: none;
+    color: #000;
+
+    @include ipadview {
+      font-size: 0.8em !important;
+    }
+
+    @include phoneview {
+      font-size: 0.6em !important;
+    }
+  }
+
+  .logo {
+    font-weight: bold;
+    font-size: 1.7em;
+
+    @include ipadview {
+      font-size: 1.3em !important;
+    }
+    @include phoneview {
+      font-size: 1em !important;
+    }
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    text-align: right;
+    a {
+      color: $subcolor;
+      margin-right: 0.5em;
+      transition: all 0.2s ease-in-out;
+      &:last-of-type {
+        margin: 0;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  .aboutme {
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    p {
+      padding: 5rem 20rem;
+      color: $subcolor;
+    }
+  }
+  .skills {
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 5rem;
+    }
+    img {
+      width: 80%;
+    }
+  }
+
+  .workexperience {
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin: 5rem;
+    }
+    .rcbc {
+      line-height: 1.5;
+      color: $subcolor;
+      img {
+        width: 10rem;
+        margin-bottom: 1em;
+      }
+      h6 {
+        font-size: 1em;
+        font-weight: bold;
+      }
+    }
+    .duties {
+      padding: 1rem 20rem;
+      line-height: 1.5;
+      color: $subcolor;
+      margin: 2.5rem;
+      text-align: justify;
+    }
+  }
+
+  .education {
+    line-height: 1.5;
+    margin-bottom: 2rem;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin: 5rem;
+    }
+    img {
+      width: 5rem;
+      margin-bottom: 1em;
+    }
+    h5 {
+      font-size: 1em;
+      font-weight: bold;
+      color: $subcolor;
+    }
+    p {
+      color: $subcolor;
+    }
+  }
+}
