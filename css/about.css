@@ -247,15 +247,55 @@ main .aboutme h1 {
   font-weight: bold;
 }
 
+@media (max-width: 780px) {
+  main .aboutme h1 {
+    font-size: 1.5em !important;
+  }
+}
+
+@media (max-width: 500px) {
+  main .aboutme h1 {
+    font-size: .9em !important;
+  }
+}
+
 main .aboutme p {
   padding: 5rem 20rem;
   color: #707070;
+  text-align: justify;
+}
+
+@media (max-width: 780px) {
+  main .aboutme p {
+    padding: 3rem 6rem !important;
+    font-size: .8em;
+  }
+}
+
+@media (max-width: 500px) {
+  main .aboutme p {
+    padding: 2rem 2rem !important;
+    font-size: .5em !important;
+  }
 }
 
 main .skills h1 {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 5rem;
+}
+
+@media (max-width: 780px) {
+  main .skills h1 {
+    font-size: 1.5em !important;
+  }
+}
+
+@media (max-width: 500px) {
+  main .skills h1 {
+    font-size: .9em !important;
+    margin-bottom: 2rem !important;
+  }
 }
 
 main .skills img {
@@ -268,13 +308,26 @@ main .workexperience h1 {
   margin: 5rem;
 }
 
+@media (max-width: 780px) {
+  main .workexperience h1 {
+    font-size: 1.5em !important;
+  }
+}
+
+@media (max-width: 500px) {
+  main .workexperience h1 {
+    font-size: .9em !important;
+    margin: 2rem 0;
+  }
+}
+
 main .workexperience .rcbc {
   line-height: 1.5;
   color: #707070;
 }
 
 main .workexperience .rcbc img {
-  width: 10rem;
+  width: 15%;
   margin-bottom: 1em;
 }
 
@@ -283,12 +336,38 @@ main .workexperience .rcbc h6 {
   font-weight: bold;
 }
 
+@media (max-width: 500px) {
+  main .workexperience .rcbc h6 {
+    font-size: .6em !important;
+  }
+}
+
+@media (max-width: 500px) {
+  main .workexperience .rcbc p {
+    font-size: .5em !important;
+  }
+}
+
 main .workexperience .duties {
-  padding: 1rem 20rem;
+  padding: 1rem 18rem;
   line-height: 1.5;
   color: #707070;
   margin: 2.5rem;
   text-align: justify;
+}
+
+@media (max-width: 780px) {
+  main .workexperience .duties {
+    padding: 1em 2em !important;
+    font-size: .8em;
+  }
+}
+
+@media (max-width: 500px) {
+  main .workexperience .duties {
+    padding: .9em .2em !important;
+    font-size: .5em !important;
+  }
 }
 
 main .education {
@@ -302,18 +381,43 @@ main .education h1 {
   margin: 5rem;
 }
 
+@media (max-width: 780px) {
+  main .education h1 {
+    font-size: 1.5em !important;
+  }
+}
+
+@media (max-width: 500px) {
+  main .education h1 {
+    font-size: .9em !important;
+    margin: 2rem !important;
+  }
+}
+
 main .education img {
-  width: 5rem;
+  width: 7%;
   margin-bottom: 1em;
 }
 
 main .education h5 {
-  font-size: 1em;
+  font-size: 10%;
   font-weight: bold;
   color: #707070;
 }
 
+@media (max-width: 500px) {
+  main .education h5 {
+    font-size: .6em !important;
+  }
+}
+
 main .education p {
   color: #707070;
+}
+
+@media (max-width: 500px) {
+  main .education p {
+    font-size: .5em !important;
+  }
 }
 /*# sourceMappingURL=about.css.map */

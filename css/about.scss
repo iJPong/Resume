@@ -40,6 +40,8 @@ header {
   align-items: center;
   margin-top: 5rem;
   margin-bottom: 5rem;
+ 
+  
 
   a {
     text-decoration: none;
@@ -96,11 +98,30 @@ main {
     h1 {
       font-size: 3rem;
       font-weight: bold;
+
+      @include ipadview {
+        font-size: 1.5em !important;
+        
+      }
+
+      @include phoneview{
+        font-size: .9em !important;
+      }
     }
 
     p {
       padding: 5rem 20rem;
       color: $subcolor;
+      text-align: justify;
+      @include ipadview {
+        padding: 3rem 6rem !important;
+        font-size: .8em;
+       
+      }
+      @include phoneview {
+        padding: 2rem 2rem !important;
+        font-size: .5em !important;
+      }
     }
   }
   .skills {
@@ -108,9 +129,18 @@ main {
       font-size: 3rem;
       font-weight: bold;
       margin-bottom: 5rem;
+      @include ipadview {
+        font-size: 1.5em !important;
+      }
+      @include phoneview{
+        font-size: .9em !important;
+        margin-bottom: 2rem !important;
+      }
     }
     img {
       width: 80%;
+      
+      
     }
   }
 
@@ -119,25 +149,50 @@ main {
       font-size: 3rem;
       font-weight: bold;
       margin: 5rem;
+      @include ipadview {
+        font-size: 1.5em !important;
+      }
+      @include phoneview{
+        font-size: .9em !important;
+        margin: 2rem 0;
+      }
     }
     .rcbc {
       line-height: 1.5;
       color: $subcolor;
       img {
-        width: 10rem;
+        width: 15%;
         margin-bottom: 1em;
       }
       h6 {
         font-size: 1em;
         font-weight: bold;
+
+        @include phoneview {
+          font-size: .6em !important;
+        }
+      }
+      p {
+        @include phoneview {
+          font-size: .5em !important;
+        }
       }
     }
     .duties {
-      padding: 1rem 20rem;
+      padding: 1rem 18rem;
       line-height: 1.5;
       color: $subcolor;
       margin: 2.5rem;
       text-align: justify;
+
+      @include ipadview{
+        padding: 1em 2em !important;
+        font-size: .8em;
+      }
+      @include phoneview {
+        padding: .9em .2em !important;
+        font-size: .5em !important;
+      }
     }
   }
 
@@ -149,18 +204,31 @@ main {
       font-size: 3rem;
       font-weight: bold;
       margin: 5rem;
+      @include ipadview {
+        font-size: 1.5em !important;
+      }
+      @include phoneview{
+        font-size: .9em !important;
+        margin: 2rem !important;
+      }
     }
     img {
-      width: 5rem;
+      width: 7%;
       margin-bottom: 1em;
     }
     h5 {
-      font-size: 1em;
+      font-size: 10%;
       font-weight: bold;
       color: $subcolor;
+      @include phoneview {
+        font-size: .6em !important;
+      }
     }
     p {
       color: $subcolor;
+      @include phoneview {
+        font-size: .5em !important;
+      }
     }
   }
 }
