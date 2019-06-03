@@ -111,6 +111,7 @@ main {
 
     p {
       padding: 5rem 20rem;
+      line-height: 1.5;
       color: $subcolor;
       text-align: justify;
       @include ipadview {

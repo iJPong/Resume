@@ -261,6 +261,7 @@ main .aboutme h1 {
 
 main .aboutme p {
   padding: 5rem 20rem;
+  line-height: 1.5;
   color: #707070;
   text-align: justify;
 }
